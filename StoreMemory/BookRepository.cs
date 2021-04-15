@@ -6,7 +6,7 @@ using System.Text;
 
 namespace StoreMemory
 {
-    class BookRepository : IBookRepositoty
+   public class BookRepository : IBookRepositoty
     {
 
         private readonly Book[] books = new[]
