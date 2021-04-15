@@ -30,3 +30,8 @@ C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Store.Web.Views.pdb
 C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Store.Web.dll
 C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Store.Web.pdb
 C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Store.Web.csproj.CopyComplete
+C:\projects\BookStore\Store.Web\bin\Debug\netcoreapp2.1\store.dll
+C:\projects\BookStore\Store.Web\bin\Debug\netcoreapp2.1\store.pdb
+C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Search\Index.g.cshtml.cs
+C:\projects\BookStore\Store.Web\bin\Debug\netcoreapp2.1\StoreMemory.dll
+C:\projects\BookStore\Store.Web\bin\Debug\netcoreapp2.1\StoreMemory.pdb

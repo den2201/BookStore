@@ -1,0 +1,12 @@
+C:\projects\BookStore\StoreMemory\bin\Debug\netstandard2.0\StoreMemory.deps.json
+C:\projects\BookStore\StoreMemory\bin\Debug\netstandard2.0\StoreMemory.dll
+C:\projects\BookStore\StoreMemory\bin\Debug\netstandard2.0\StoreMemory.pdb
+C:\projects\BookStore\StoreMemory\bin\Debug\netstandard2.0\store.dll
+C:\projects\BookStore\StoreMemory\bin\Debug\netstandard2.0\store.pdb
+C:\projects\BookStore\StoreMemory\obj\Debug\netstandard2.0\StoreMemory.csprojAssemblyReference.cache
+C:\projects\BookStore\StoreMemory\obj\Debug\netstandard2.0\StoreMemory.csproj.CoreCompileInputs.cache
+C:\projects\BookStore\StoreMemory\obj\Debug\netstandard2.0\StoreMemory.AssemblyInfoInputs.cache
+C:\projects\BookStore\StoreMemory\obj\Debug\netstandard2.0\StoreMemory.AssemblyInfo.cs
+C:\projects\BookStore\StoreMemory\obj\Debug\netstandard2.0\StoreMemory.csproj.CopyComplete
+C:\projects\BookStore\StoreMemory\obj\Debug\netstandard2.0\StoreMemory.dll
+C:\projects\BookStore\StoreMemory\obj\Debug\netstandard2.0\StoreMemory.pdb
