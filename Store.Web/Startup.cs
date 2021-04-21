@@ -20,7 +20,8 @@ namespace Store.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IBookRepositoty, BookRepository>();
+            services.AddSingleton<IBookRepository, BookRepository>();
+            services.AddSingleton<BookService>();
             services.AddMvc();
         }
 

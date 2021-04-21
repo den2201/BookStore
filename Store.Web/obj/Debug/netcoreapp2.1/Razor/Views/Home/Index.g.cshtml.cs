@@ -59,7 +59,7 @@ using Store.Web.Models;
 #line default
 #line hidden
             BeginContext(45, 137, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "194c32c9c696423e9a707a74a42433bd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bdb21a44fc8b45038e7b9e884e66ddd4", async() => {
                 BeginContext(81, 94, true);
                 WriteLiteral("\r\n    <input type=\"text\" name=\"query\" value=\"\" />\r\n    <button type=\"submit\">Search</button>\r\n");
                 EndContext();
