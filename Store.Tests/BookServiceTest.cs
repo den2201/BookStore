@@ -15,8 +15,8 @@ namespace Store.Tests
         public void GetAllByQuery_WithIsbn_CallGetAllByIsbn()
         {
             var bookRepositoryStub = new Mock<IBookRepository>();
-            bookRepositoryStub.Setup(x => x.GetAllByIsbn(It.IsAny<string>())).Returns(new[] { new Book(1, "", "", "") });
-            bookRepositoryStub.Setup(x => x.GetAllByTitleOrAuthor(It.IsAny<string>())).Returns(new[] { new Book(2, "", "", "") });
+            bookRepositoryStub.Setup(x => x.GetAllByIsbn(It.IsAny<string>())).Returns(new[] { new Book(1, "", "", "","",0m) });
+            bookRepositoryStub.Setup(x => x.GetAllByTitleOrAuthor(It.IsAny<string>())).Returns(new[] { new Book(2, "", "", "","",0m) });
 
             var bookService = new BookService(bookRepositoryStub.Object);
             var validIsbn = "ISBN 12345-67890";
@@ -29,8 +29,8 @@ namespace Store.Tests
         public void GetAllByQuery_WithInvalidIsbn_CallGetAllTitleOrAuthor()
         {
             var bookRepositoryStub = new Mock<IBookRepository>();
-            bookRepositoryStub.Setup(x => x.GetAllByIsbn(It.IsAny<string>())).Returns(new[] { new Book(1, "", "", "") });
-            bookRepositoryStub.Setup(x => x.GetAllByTitleOrAuthor(It.IsAny<string>())).Returns(new[] { new Book(2, "", "", "") });
+            bookRepositoryStub.Setup(x => x.GetAllByIsbn(It.IsAny<string>())).Returns(new[] { new Book(1, "", "", "","",0m) });
+            bookRepositoryStub.Setup(x => x.GetAllByTitleOrAuthor(It.IsAny<string>())).Returns(new[] { new Book(2, "", "", "","",0m) });
 
             var bookService = new BookService(bookRepositoryStub.Object);
             var notValidIsbn = "ISBN 12345-67";

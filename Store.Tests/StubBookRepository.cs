@@ -9,6 +9,8 @@ namespace Store.Tests
 
         Book[] ResultGetAllByTitleOrAuthor { get; set; }
 
+        Book ResultGetById { get; set; }
+
         public Book[] GetAllByIsbn(string isbn)
         {
             return ResultOfGetAllByIsbn;
@@ -17,6 +19,11 @@ namespace Store.Tests
         public Book[] GetAllByTitleOrAuthor(string titleOrAuthor)
         {
             return ResultGetAllByTitleOrAuthor;
+        }
+
+        public Book GetById(int id)
+        {
+            return ResultGetById;
         }
     }
 }

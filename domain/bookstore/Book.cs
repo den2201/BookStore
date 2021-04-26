@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 using System.Text.RegularExpressions;
 
 namespace store
@@ -15,12 +13,18 @@ namespace store
 
         public string Author { get; }
 
-        public Book (int id, string Isbn, string author, string title)
+        public string Description { get; }
+
+        public decimal Price { get; }
+
+        public Book (int id, string Isbn, string author, string title, string description, decimal price)
         {
             Id = id;
             Title = title;
             this.Isbn = Isbn;
             Author = author;
+            Description = description;
+            Price = price;
         }
 
         internal static bool IsIsbn(string query)
