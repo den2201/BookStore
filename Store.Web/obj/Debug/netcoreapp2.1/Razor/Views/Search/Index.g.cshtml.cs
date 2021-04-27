@@ -28,8 +28,13 @@ using Store;
 
 #line default
 #line hidden
+#line 4 "C:\projects\BookStore\Store.Web\Views\_ViewImports.cshtml"
+using store;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d9715f9ddc1bfcee9f5a2622ab30a6c8ff10844c", @"/Views/Search/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"415cf517de6f9474ad852fd1778bf713041f619e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eef3bdadf776e1fb61026d05d2db99f779df0002", @"/Views/_ViewImports.cshtml")]
     public class Views_Search_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<store.Book>>
     {
         #pragma warning disable 1998

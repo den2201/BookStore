@@ -8,5 +8,8 @@
 <p><strong>@Model.Author</strong></p>
 <p><strong>@Model.Description</strong></p>
 <p>Price:<strong>@Model.Price</strong></p>
-
+<form action="@Url.Action("Add","Cart")" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button class="btn btn-info" type="submit">Insert in basket</button>
+</form>
 

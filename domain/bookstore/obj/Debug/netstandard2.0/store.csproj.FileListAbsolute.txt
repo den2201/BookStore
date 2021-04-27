@@ -6,3 +6,4 @@ C:\projects\BookStore\domain\bookstore\obj\Debug\netstandard2.0\store.AssemblyIn
 C:\projects\BookStore\domain\bookstore\obj\Debug\netstandard2.0\store.AssemblyInfo.cs
 C:\projects\BookStore\domain\bookstore\obj\Debug\netstandard2.0\store.dll
 C:\projects\BookStore\domain\bookstore\obj\Debug\netstandard2.0\store.pdb
+C:\projects\BookStore\domain\bookstore\obj\Debug\netstandard2.0\store.csprojAssemblyReference.cache

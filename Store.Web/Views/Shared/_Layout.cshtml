@@ -13,11 +13,33 @@
 <body>
     <header>
         <nav class="navbar bg-warning">
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index" asp-area="">Book Search</a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index" asp-area="">Home page</a>
+            <br />
             <form class="form-inline" action="@Url.Action("Index","Search") " method="get">
                 <input class="form-control" name="query" type="search" placeholder="author or title"/>
                 <button class="btn-default" type="submit">Search</button>
             </form>
+            <span class="navbar-text media-left">
+                @{ 
+                    store.Cart cart = null;
+                    if((Context.Session.IsAvailable)&&(!Context.Session.TryGetCart(out cart)))
+                    {
+                        cart = new Cart();
+                    }
+
+                    if((cart != null)&&(cart.Items.Count == 0))
+                    {
+                        @:Basket is empty
+                    }
+                    else
+                    {
+                        int eachIdBooksCount = cart.Items.Where(x => x.Value > 1).Select(x => x.Value - 1).Sum();
+
+                        @:Books : @(cart.Items.Count + eachIdBooksCount) Total Price: @cart.Amount
+                    }
+
+                }
+            </span>
         </nav>
     </header>
    
