@@ -19,25 +19,17 @@
                 <input class="form-control" name="query" type="search" placeholder="author or title"/>
                 <button class="btn-default" type="submit">Search</button>
             </form>
-            <span class="navbar-text media-left">
+            <span class="navbar-text media-right">
                 @{ 
                     store.Cart cart = null;
-                    if((Context.Session.IsAvailable)&&(!Context.Session.TryGetCart(out cart)))
+                    if((Context.Session.IsAvailable)&&(Context.Session.TryGetCart(out cart)))
                     {
-                        cart = new Cart();
-                    }
-
-                    if((cart != null)&&(cart.Items.Count == 0))
-                    {
-                        @:Basket is empty
+                      <a href=" ">Products: @cart.TotalCount Total Price: @cart.TotalPrice</a>
                     }
                     else
                     {
-                        int eachIdBooksCount = cart.Items.Where(x => x.Value > 1).Select(x => x.Value - 1).Sum();
-
-                        @:Books : @(cart.Items.Count + eachIdBooksCount) Total Price: @cart.Amount
+                        @:Basket is empty
                     }
-
                 }
             </span>
         </nav>

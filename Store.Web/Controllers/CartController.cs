@@ -10,30 +10,32 @@ namespace Store.Web.Controllers
     public class CartController : Controller
     {
         private readonly IBookRepository bookRepository;
-
-        public CartController(IBookRepository repository)
+        private readonly IOrderRepository orderRepository;
+        public CartController(IBookRepository repository,
+                                            IOrderRepository orderRepository)
         {
             bookRepository = repository;
+            this.orderRepository = orderRepository;
         }
         public IActionResult Add(int id)
         {
-            var book = bookRepository.GetById(id);
             Cart cart;
-
-            if(!HttpContext.Session.TryGetCart(out cart))
+            Order order;
+            if(HttpContext.Session.TryGetCart(out cart))
             {
-                cart = new Cart();
-            }
-
-            if(cart.Items.ContainsKey(id))
-            {
-                cart.Items[id]++;
+                order = orderRepository.GetById(cart.OrderId);
             }
             else
             {
-                cart.Items[id] = 1;
+                order = orderRepository.Create();
+                cart = new Cart(order.Id);
             }
-            cart.Amount += book.Price;
+
+            var book = bookRepository.GetById(id);
+            order.AddItem(book, 1);
+            orderRepository.Update(order);
+            cart.TotalCount = order.TotalCount;
+            cart.TotalPrice = order.TotalPrice;
 
             HttpContext.Session.Set(cart);
             return RedirectToAction("Index", "Book", new { id });
