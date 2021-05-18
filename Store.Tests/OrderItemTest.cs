@@ -36,6 +36,17 @@ namespace Store.Tests
             Assert.Equal(count, order.Count);
         }
 
+        [Fact]
+        public void Count_WithNegativeValue_ThrowOutOfRangeException()
+        {
+            int count = 2;
+            var orderItem = new OrderItem(1, count, 6m);
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                orderItem.Count = -2;
+            });
+        }
+
 
 
 

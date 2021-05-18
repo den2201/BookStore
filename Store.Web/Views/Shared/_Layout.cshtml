@@ -24,7 +24,7 @@
                     store.Cart cart = null;
                     if((Context.Session.IsAvailable)&&(Context.Session.TryGetCart(out cart)))
                     {
-                      <a href=" ">Products: @cart.TotalCount Total Price: @cart.TotalPrice</a>
+                      <a href="@Url.Action("Index", "Order")">Products: @cart.TotalCount Total Price: @cart.TotalPrice</a>
                     }
                     else
                     {

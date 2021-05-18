@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Store.Tests
 {
-   public class OrderTest
+    public class OrderTest
     {
         [Fact]
         public void Order_WithNullItems_ThrowsArgumentNullException()
@@ -66,5 +66,37 @@ namespace Store.Tests
 
             });
         }
+
+        [Fact]
+        public void Get_WithExistingItem_ReturnItem()
+        {
+            Order order = new Order(1, new[]
+           {
+                new OrderItem(1, 3, 10m),
+
+                new OrderItem(2, 5, 100m)
+
+            });
+
+            var orderItem = order.Get(2);
+            Assert.Equal(5, orderItem.Count);
+        }
+
+
+        [Fact]
+        public void Get_WithNotExistingItem_TrowsInvalidOperationException()
+        {
+            Order order = new Order(1, new[]
+            {
+                new OrderItem(1, 3, 10m),
+                new OrderItem(2, 5, 100m)
+            });
+
+           Assert.Throws<InvalidOperationException>(() =>
+           {
+               var orderItem = order.Get(5);
+           });
+        }
     }
 }
+

@@ -16,15 +16,22 @@ namespace store
             get { return items; }
         }
 
-        public int TotalCount
-        {
-            get { return items.Sum(items => items.Count); }
-        }
+        public int State { get; }
 
-        public decimal TotalPrice
+        public int TotalCount => items.Sum(items => items.Count); 
+        
+        public OrderItem Get(int bookId)
         {
-            get { return items.Sum(item => item.Price * item.Count); }
+            int index = items.FindIndex(x => x.BookId == bookId);
+            if (index == -1)
+            {
+                throw new InvalidOperationException("Book not found ");
+            }
+            else
+                return items[index];
         }
+        public decimal TotalPrice => items.Sum(item => item.Price * item.Count); 
+        
 
         public Order(int id, IEnumerable<OrderItem> items)
         {
@@ -34,6 +41,23 @@ namespace store
             }
             Id = id;
             this.items = new List<OrderItem>(items);
+        }
+
+        public void AddOrUpdate(Book book, int count)
+        {
+            if(book == null)
+            {
+                throw new ArgumentNullException(nameof(book));
+            }
+            int index = items.FindIndex(x => x.BookId == book.Id);
+            if(index == -1)
+            {
+                items.Add(new OrderItem(book.Id, count, book.Price));
+            }
+            else
+            {
+                items[index].Count += count;
+            }
         }
 
         public void AddItem(Book book, int count)
@@ -53,6 +77,20 @@ namespace store
                 items.Remove(item);
                 items.Add(new OrderItem(book.Id, item.Count + count, item.Price + count * book.Price));
             }
+        }
+
+        public void RemoveItem(Book book)
+        {
+            if (book == null)
+            {
+                throw new ArgumentNullException(nameof(book));
+            }
+            int index = items.FindIndex(x => x.BookId == book.Id);
+            if(index == -1)
+            {
+                throw new InvalidOperationException($"Order does not contain with curent ID");
+            }
+            items.RemoveAt(index);
         }
     }
 }

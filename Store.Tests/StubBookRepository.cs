@@ -1,4 +1,5 @@
-﻿using store;
+﻿using System.Collections.Generic;
+using store;
 
 
 namespace Store.Tests
@@ -9,7 +10,14 @@ namespace Store.Tests
 
         Book[] ResultGetAllByTitleOrAuthor { get; set; }
 
+        Book [] ResultGetAllbookByListId { get; set; }
+
         Book ResultGetById { get; set; }
+
+        public Book[] GetAllBooksById(IEnumerable<int> idList)
+        {
+            return ResultGetAllbookByListId;
+        }
 
         public Book[] GetAllByIsbn(string isbn)
         {

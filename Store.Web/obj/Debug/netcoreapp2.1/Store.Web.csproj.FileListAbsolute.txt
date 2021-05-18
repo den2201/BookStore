@@ -35,3 +35,6 @@ C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Store.Web.csproj.CopyCom
 C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Store.Web.dll
 C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Store.Web.pdb
 C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Book\Index.g.cshtml.cs
+C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Empty.g.cshtml.cs
+C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Index.g.cshtml.cs
+C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Confirmation.g.cshtml.cs

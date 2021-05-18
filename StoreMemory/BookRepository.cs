@@ -17,6 +17,14 @@ namespace StoreMemory
 
         };
 
+        public Book[] GetAllBooksById(IEnumerable<int> idList)
+        {
+            var foundBook = from book in books
+                            join bookId in idList on book.Id equals bookId
+                            select book;
+            return foundBook.ToArray();
+        }
+
         public Book[] GetAllByIsbn(string isbn)
         {
             return books.Where(book => book.Isbn == isbn).ToArray();
