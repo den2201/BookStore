@@ -1,0 +1,40 @@
+﻿@model store.Contractors.Form
+
+@{
+    ViewData["Title"] = "DeliveryStep";
+}
+
+<h2>DeliveryStep</h2>
+<form action="@Url.Action("NextDelivery")" method="post">
+    <input type="hidden" name="id" value="@Model.OrderId" />
+    <input type="hidden" name="uniqueCode" value="@Model.UniqueCode" />
+    <input type="hidden" name="step" value="@Model.Step" />
+
+    @foreach (var item in Model.Fields)
+    {
+        @if (item is store.Contractors.HiddenField hiddenField)
+        {
+            <input type="hidden" name="values[@item.Name]" value="@item.Value" />
+
+        }
+        else if (item is store.Contractors.SelectionField selectedField)
+        {
+            <div class="form-group">
+                <label for="values[@item.Name]">@item.Value</label>
+                <select class="form-control" name="@item.Name">
+                    @foreach (var items in selectedField.Items)
+                    {
+                        <option value="@items.Key">@items.Value</option>
+                    }
+                </select>
+
+            </div>
+
+        }
+    }
+
+    <button class="btn btn-success" type="submit">Next</button>
+
+</form>
+
+

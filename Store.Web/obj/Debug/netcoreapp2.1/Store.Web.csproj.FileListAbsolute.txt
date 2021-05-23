@@ -38,3 +38,5 @@ C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Book\Index.g
 C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Empty.g.cshtml.cs
 C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Index.g.cshtml.cs
 C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Confirmation.g.cshtml.cs
+C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\DliveryMethod.g.cshtml.cs
+C:\projects\BookStore\Store.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\DeliveryStep.g.cshtml.cs
